@@ -100,7 +100,7 @@ The position of the vehicle with respect to the center of the lane is calculated
 LaneCenterPosition = (RightFit_Xint + LeftFit_Xint) /2
 CenterDistance = (car_position - LaneCenterPosition) * Xaxis_MetersPerPixel
 ```
-`RightFit_Xint` and `LefttFit_Xint` are the x-intercepts of the right and left fits, respectively. 
+`RightFit_Xint` and `LeftFit_Xint` are the x-intercepts of the right and left fits, respectively. 
 
 
 
