@@ -132,15 +132,15 @@ which writes text identifying the curvature radius and vehicle position data ont
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
 Problems encountered: 
--lighting conditions
--shadows 
--curvy roads
--unstable pitch(ups and downs on the road)
+- lighting conditions
+- shadows 
+- curvy roads
+- unstable pitch(ups and downs on the road)
 - unstable lane width
-Initially i have considered using the gradient information for detecting lanes but i had to discard that due to too much noisy content on the output.
-Then i have switched to L channel of the HLS color space to isolate white lines and the B channel of the LAB colorspace to isolate yellow lines.
+
+Initially i have considered using the gradient information for detecting lanes but i had to discard that due to too much noisy content on the output.Then i have switched to L channel of the HLS color space to isolate white lines and the B channel of the LAB colorspace to isolate yellow lines.
 
 considerations for making my algorithm more robust:
--Implementing a state machine which could keep track of the previously detected lanes and their behaviour pattern.
--Processing a resized(interpolated image) to reduce the processing time.(need to experiment to find the drawbacks)
--processing alternate frames to reduce the runtime of the algorithm.
+- Implementing a state machine which could keep track of the previously detected lanes and their behaviour pattern.
+- Processing a resized(interpolated image) to reduce the processing time.(need to experiment to find the drawbacks)
+- processing alternate frames to reduce the runtime of the algorithm.
